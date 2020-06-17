@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox style="-fx-background-color: #4c6085;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.estudos.controller.JFXPrincipalControle">
+   <children>
+      <MenuBar prefHeight="32.0" prefWidth="920.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Cadastros">
+              <items>
+                  <MenuItem fx:id="menuCursos" mnemonicParsing="false" onAction="#abrirCursos" text="Cursos" />
+                  <MenuItem fx:id="menuDisciplinas" mnemonicParsing="false" onAction="#abrirDisciplinas" text="Disciplinas" />
+                  <MenuItem fx:id="menuProfessores" mnemonicParsing="false" onAction="#abrirProfessores" text="Professores" />
+                <MenuItem fx:id="menuUsuarios" mnemonicParsing="false" onAction="#abrirUsuarios" text="Usuários" />
+              </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="88.0" prefWidth="1106.0">
+         <children>
+            <Label alignment="BOTTOM_LEFT" layoutX="6.0" layoutY="37.0" opacity="0.6" prefHeight="51.0" prefWidth="1089.0" text="Estudos" textFill="#22223b">
+               <font>
+                  <Font name="System Bold" size="35.0" />
+               </font>
+               <effect>
+                  <DropShadow color="WHITE" />
+               </effect>
+            </Label>
+            <Label fx:id="lUsuarioLogado" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="3.0" layoutY="6.0" prefHeight="21.0" prefWidth="1106.0" textAlignment="RIGHT" textFill="WHITE" />
+            <Button fx:id="bSair" contentDisplay="RIGHT" layoutX="1021.0" layoutY="47.0" mnemonicParsing="false" onAction="#sair" prefHeight="30.0" prefWidth="75.0" style="-fx-background-color: #22223b;" text="Sair" textFill="WHITE">
+               <effect>
+                  <DropShadow color="WHITE" />
+               </effect>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</VBox>
